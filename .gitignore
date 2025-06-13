@@ -1,0 +1,13 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+env/
+
+# Ignore MLflow tracking directory
+mlruns/
+
+# Ignore all saved Q-tables except the best one
+q_table_*.pkl
+!best_q_table.pkl
