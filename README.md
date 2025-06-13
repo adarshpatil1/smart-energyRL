@@ -56,5 +56,3 @@ These tools are used in professional MLOps pipelines to bridge models with real-
 
 ---
 
-## 📁 Project Structure
-
