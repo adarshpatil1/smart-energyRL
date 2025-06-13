@@ -2,6 +2,8 @@ import numpy as np
 
 class SmartHomeEnv:
     def __init__(self):
+        self.action_space = type('', (), {})()  # Create an empty object
+        self.action_space.n = 4  # Or whatever number of actions you have
         self.hour = 0
         self.temp_outside = 25
         self.devices = {
