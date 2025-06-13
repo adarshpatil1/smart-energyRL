@@ -13,7 +13,7 @@ def load_q_table(path="best_q_table.pkl"):
         return pickle.load(f)
 
 # Run simulation using Q-table
-def run_simulation(q_table, num_steps=50):
+def run_simulation(q_table, num_steps=200):
     env = SmartHomeEnv()
     agent = QLearningAgent(n_actions=env.action_space.n)
     agent.q_table = q_table

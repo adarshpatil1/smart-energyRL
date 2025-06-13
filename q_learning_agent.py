@@ -10,15 +10,21 @@ class QLearningAgent:
         self.epsilon = epsilon
         self.n_actions = n_actions
 
-    def get_state_key(self, state):
-        return tuple(np.round(state, 2))  # Discretize state for key
+    def _get_state(self):
+        return (
+        int(self.devices["heater"]),
+        int(self.devices["light"]),
+        int(self.devices["fan"]),
+        round(self.temp_outside),  # or int(...)
+        self.hour
+        )
 
     def choose_action(self, state):
-        key = self.get_state_key(state)
-        if random.random() < self.epsilon:
-            return random.randint(0, self.n_actions - 1)  # Explore
-        else:
+        key = tuple(state)
+        if key in self.q_table:
             return np.argmax(self.q_table[key])  # Exploit
+        else:
+            return np.random.choice(self.n_actions)  # Safe fallback
 
     def update(self, state, action, reward, next_state):
         key = self.get_state_key(state)
