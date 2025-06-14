@@ -9,7 +9,7 @@ In a smart home setting, devices can be turned on/off based on external temperat
 - Avoid comfort penalties (e.g., cold nights without heating or dark evenings without lights)
 - Learn control policies automatically using Q-learning
 
-We used **Q-Learning**, a model-free RL algorithm, to learn when to turn each device on/off for energy and comfort optimization.
+ Here I used **Q-Learning**, a model-free RL algorithm, to learn when to turn each device on/off for energy and comfort optimization.
 
 ## 🧠 Why Q-Learning?
 
@@ -27,32 +27,9 @@ MLflow helps track:
 - Metrics (total reward)
 - Artifacts (Q-table)
 
-We used it to:
+Here I used it to:
 - Compare different hyperparameter settings
 - Log reward per episode
 - Save the best-performing Q-table for reproducibility
 
 ---
-
-## 🐳 Why Docker?
-
-**Why Docker?**
-Docker ensures:
-- Consistent environment across systems
-- Easier deployment and sharing
-- Dependency isolation
-
-In a real-world setup, this smart control system could run on a Raspberry Pi or cloud server — Docker helps us make it portable.
-
----
-
-## 🌐 FastAPI (or Streamlit)
-
-While this project is RL-focused, in the next phase:
-- **FastAPI** can expose the trained model as a REST API, allowing external apps to query the best action (for deployment).
-- **Streamlit** can visualize training logs, live device behavior, and reward progress for better explainability.
-
-These tools are used in professional MLOps pipelines to bridge models with real-time systems and users.
-
----
-
