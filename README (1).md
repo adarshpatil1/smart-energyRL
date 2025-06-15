@@ -50,11 +50,13 @@ In smart homes, appliances often stay on unnecessarily, leading to energy wastag
 
 
 
-
 ## Demo
 
-Here you can look for a demo which showcases the total reward agent is generating 
-- smartenergyrl.streamlit.app
+I have deployed the project on streamlit cloud and here is the url, 
+which showcases the total reward agent is generating in a day.
+
+[Smart Enegy RL app](https://smartenegyrl.streamlit.app)
+
 
 ## Results 
 
@@ -74,7 +76,18 @@ Not respecting comfort conditions (e.g., keeping heater off when it's cold and s
 
 👉 The agent always loses some reward, but the goal is to lose as little as possible.
 
+## Screenshots
+
+#### Mlflow tracking-
+
+[Dashboard](C:\Users\ashis\Desktop\Andrew Ng ML\Unsupervised Learning\Screenshot 2025-06-06 203512.png)
 
 
+#### Reward graphs of different experiments
 
+[Plot](C:\Users\ashis\Desktop\Andrew Ng ML\Unsupervised Learning\Screenshot 2025-06-14 191917.png)
+
+#### Streamlit app
+
+[Home](C:\Users\ashis\Desktop\Andrew Ng ML\Unsupervised Learning\Screenshot 2025-06-15 194516.png)
 
