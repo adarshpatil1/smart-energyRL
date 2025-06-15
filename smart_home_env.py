@@ -14,13 +14,13 @@ class SmartHomeEnv:
         self.state = self._get_state()
 
     def _get_state(self):
-        return np.array([
-            self.hour,
-            int(self.devices["heater"]),
-            int(self.devices["light"]),
-            int(self.devices["fan"]),
-            self.temp_outside
-        ])
+        # Discretize and convert to int to match Q-table keys
+        heater_state = int(self.devices["heater"])
+        light_state = int(self.devices["light"])
+        fan_state = int(self.devices["fan"])
+        temp_state = int(round(self.temp_outside))  # Round or discretize as needed
+        hour_state = int(self.hour)
+        return (heater_state, light_state, fan_state, temp_state, hour_state)
 
     def step(self, action):
         if action == 1:

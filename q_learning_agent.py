@@ -20,18 +20,17 @@ class QLearningAgent:
         )
 
     def choose_action(self, state):
-        key = tuple(state)
+        key = tuple(int(s) for s in state)  # Ensure all elements are int
         if key in self.q_table:
             return np.argmax(self.q_table[key])  # Exploit
         else:
-            return np.random.choice(self.n_actions)  # Safe fallback
+            print(f"Unknown state encountered: {key}")
+            return np.random.choice(self.n_actions)
 
     def update(self, state, action, reward, next_state):
-        key = self.get_state_key(state)
-        next_key = self.get_state_key(next_state)
-
+        key = tuple(int(s) for s in state)
+        next_key = tuple(int(s) for s in next_state)
         current_q = self.q_table[key][action]
         max_next_q = np.max(self.q_table[next_key])
         new_q = current_q + self.lr * (reward + self.gamma * max_next_q - current_q)
-
         self.q_table[key][action] = new_q

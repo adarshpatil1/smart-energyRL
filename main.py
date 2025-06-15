@@ -1,4 +1,3 @@
-
 import mlflow
 from smart_home_env import SmartHomeEnv
 from q_learning_agent import QLearningAgent
@@ -28,14 +27,13 @@ def run_experiment(run_id, config):
         mlflow.log_params(config)
 
         for episode in range(num_episodes):
-            state = tuple(env.reset())
+            state = env.reset()  # Already a tuple of ints
             total_reward = 0
             done = False
 
             while not done:
                 action = agent.choose_action(state)
                 next_state, reward, done, _ = env.step(action)
-                next_state = tuple(next_state)
                 agent.update(state, action, reward, next_state)
                 state = next_state
                 total_reward += reward
