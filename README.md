@@ -78,16 +78,4 @@ Not respecting comfort conditions (e.g., keeping heater off when it's cold and s
 
 ## Screenshots
 
-#### Mlflow tracking-
-
-[Dashboard](C:\Users\ashis\Desktop\Andrew Ng ML\Unsupervised Learning\Screenshot 2025-06-06 203512.png)
-
-
-#### Reward graphs of different experiments
-
-[Plot](C:\Users\ashis\Desktop\Andrew Ng ML\Unsupervised Learning\Screenshot 2025-06-14 191917.png)
-
-#### Streamlit app
-
-[Home](C:\Users\ashis\Desktop\Andrew Ng ML\Unsupervised Learning\Screenshot 2025-06-15 194516.png)
 
