@@ -13,7 +13,7 @@ In a smart home setting, devices can be turned on/off based on external temperat
 
 ## 🧠 Why Q-Learning?
 
-Q-Learning is simple yet powerful for environments with discrete state/action spaces like our smart home. It doesn’t require a simulation model and learns through exploration, making it ideal for:
+Q-Learning is simple yet powerful for environments with discrete state/action spaces like our smart home. It doesn't require a simulation model and learns through exploration, making it ideal for:
 - Simple to moderate control problems
 - Fast convergence in low-dimensional state spaces
 
@@ -27,9 +27,39 @@ MLflow helps track:
 - Metrics (total reward)
 - Artifacts (Q-table)
 
-Here I used it to:
+We used it to:
 - Compare different hyperparameter settings
 - Log reward per episode
 - Save the best-performing Q-table for reproducibility
+
+---
+
+## 🐳 Why Docker?
+
+**Why Docker?**
+Docker ensures:
+- Consistent environment across systems
+- Easier deployment and sharing
+- Dependency isolation
+
+In a real-world setup, this smart control system could run on a Raspberry Pi or cloud server — Docker helps us make it portable.
+
+---
+
+## 🌐 FastAPI (or Streamlit)
+
+While this project is RL-focused, in the next phase:
+- **FastAPI** can expose the trained model as a REST API, allowing external apps to query the best action (for deployment).
+- **Streamlit** can visualize training logs, live device behavior, and reward progress for better explainability.
+
+These tools are used in professional MLOps pipelines to bridge models with real-time systems and users.
+
+---
+
+## 📝 Current State
+
+- The project is deployed for demonstration purposes.
+- The rewards are still being optimized, and the current performance may not reflect the final results.
+- We are actively working on improving the model and will update the deployment as we make progress.
 
 ---
