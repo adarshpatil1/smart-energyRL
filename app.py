@@ -8,7 +8,7 @@ from q_learning_agent import QLearningAgent
 
 # Load the trained Q-table
 @st.cache_data
-def load_q_table(path="q_table_c_4.pkl"):
+def load_q_table(path="q_table_C_4.pkl"):
     with open(path, "rb") as f:
         q_table = pickle.load(f)
     return {normalize_key(k): v for k, v in q_table.items()}
