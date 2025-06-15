@@ -1,65 +1,49 @@
-# Smart Energy RL Optimization 🔋🏠
+# 🏠 Smart Home Energy Optimization using Reinforcement Learning
 
-This project simulates a smart home energy system and uses **Reinforcement Learning (RL)** to optimize the usage of home devices (heater, light, fan) to reduce energy costs while maintaining user comfort.
+A Reinforcement Learning (RL) project that simulates intelligent control of home appliances (light, fan, heater) to minimize energy consumption and maximize efficiency using Q-learning.
 
-## 🚀 Project Overview
+## 📌 Project Highlights
 
-In a smart home setting, devices can be turned on/off based on external temperature and time of day. The goal is to:
-- Minimize energy usage cost
-- Avoid comfort penalties (e.g., cold nights without heating or dark evenings without lights)
-- Learn control policies automatically using Q-learning
-
- Here I used **Q-Learning**, a model-free RL algorithm, to learn when to turn each device on/off for energy and comfort optimization.
-
-## 🧠 Why Q-Learning?
-
-Q-Learning is simple yet powerful for environments with discrete state/action spaces like our smart home. It doesn't require a simulation model and learns through exploration, making it ideal for:
-- Simple to moderate control problems
-- Fast convergence in low-dimensional state spaces
+- **Q-learning Agent**: Learns optimal actions based on state features like time, temperature, and presence.
+- **Custom SmartHome Environment**: Simulates real-world energy scenarios.
+- **MLflow Integration**: Tracks experiments, hyperparameters, and rewards.
+- **Streamlit App**: Web app for simulating and visualizing agent behavior.
+- **Reward Optimization**: Agent trained over multiple configurations to reach optimal energy usage patterns.
 
 ---
 
-## 📊 MLflow for Experiment Tracking
+## 📊 Problem Statement
 
-**Why MLflow?**
-MLflow helps track:
-- Model parameters (learning rate, discount factor, epsilon)
-- Metrics (total reward)
-- Artifacts (Q-table)
+In smart homes, appliances often stay on unnecessarily, leading to energy wastage. This project builds an RL agent that **learns when to turn appliances ON or OFF** based on the environment, aiming to:
 
-We used it to:
-- Compare different hyperparameter settings
-- Log reward per episode
-- Save the best-performing Q-table for reproducibility
+- Reduce energy usage
+- Maintain comfort
+- Learn from experience
 
 ---
 
-## 🐳 Why Docker?
+## 🚀 Technologies Used
 
-**Why Docker?**
-Docker ensures:
-- Consistent environment across systems
-- Easier deployment and sharing
-- Dependency isolation
-
-In a real-world setup, this smart control system could run on a Raspberry Pi or cloud server — Docker helps us make it portable.
-
----
-
-## 🌐 FastAPI (or Streamlit)
-
-While this project is RL-focused, in the next phase:
-- **FastAPI** can expose the trained model as a REST API, allowing external apps to query the best action (for deployment).
-- **Streamlit** can visualize training logs, live device behavior, and reward progress for better explainability.
-
-These tools are used in professional MLOps pipelines to bridge models with real-time systems and users.
+| Tool         | Purpose                                      |
+|--------------|----------------------------------------------|
+| **Python**   | Core programming language                    |
+| **Q-learning** | Reinforcement Learning algorithm           |
+| **MLflow**   | Experiment tracking                          |
+| **Streamlit**| Visualization and simulation UI              |
+| **Matplotlib/Pandas** | Data analysis and plotting         |
 
 ---
 
-## 📝 Current State
+## 🧠 How It Works
 
-- The project is deployed for demonstration purposes.
-- The rewards are still being optimized, and the current performance may not reflect the final results.
-- We are actively working on improving the model and will update the deployment as we make progress.
+1. **Environment** simulates room temperature, device states, etc.
+2. **Agent** chooses an action based on the current state (explore/exploit).
+3. **Reward** is calculated (e.g., energy saved vs comfort compromised).
+4. **Q-table** is updated to improve future decisions.
+5. **MLflow** logs each run's performance for comparison.
+6. **Streamlit App** allows user to run simulations interactively.
 
 ---
+
+## 📂 Project Structure
+
