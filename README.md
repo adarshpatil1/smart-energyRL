@@ -79,5 +79,9 @@ Not respecting comfort conditions (e.g., keeping heater off when it's cold and s
 ## Screenshots
 
 [MLflow experiments](./screenshots/mlflow_experiments.png)
+
+
 [Rewards Plot](./screenshots/reward_plots.png)
+
+
 [Streamlit Home](./screenshots/streamlit_home.png)
