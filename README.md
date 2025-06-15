@@ -1,4 +1,5 @@
-# 🏠 Smart Home Energy Optimization using Reinforcement Learning
+
+# Smart Home Energy Optimization using Reinforcement Learning
 
 A Reinforcement Learning (RL) project that simulates intelligent control of home appliances (light, fan, heater) to minimize energy consumption and maximize efficiency using Q-learning.
 
@@ -45,5 +46,34 @@ In smart homes, appliances often stay on unnecessarily, leading to energy wastag
 
 ---
 
-## 📂 Project Structure
+## 
+
+
+
+
+## Demo
+
+Here you can look for a demo which showcases the total reward agent is generating 
+- smartenergyrl.streamlit.app
+
+## Results 
+
+❗ Why Are Rewards Negative?
+In environment setup, penalties are assigned for actions that consume energy, such as:
+
+Turning on the fan, heater, or light unnecessarily.
+
+Not respecting comfort conditions (e.g., keeping heater off when it's cold and someone is present).
+
+| Situation                           | Reward Value     |
+| ----------------------------------- | ---------------- |
+| Appliance **ON** (uses energy)      | `-1`, `-2`, etc. |
+| Discomfort (e.g., cold + no heater) | `-3`, `-5`, etc. |
+| Neutral or energy-saving action     | `0` or small `-` |
+
+
+👉 The agent always loses some reward, but the goal is to lose as little as possible.
+
+
+
 
