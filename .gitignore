@@ -10,4 +10,4 @@ mlruns/
 
 # Ignore all saved Q-tables except the best one
 q_table_*.pkl
-!best_q_table.pkl
+!q_table_c_4.pkl
