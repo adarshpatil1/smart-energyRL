@@ -47,3 +47,4 @@ In smart homes, appliances often stay on unnecessarily, leading to energy wastag
 
 ## 📂 Project Structure
 
+
