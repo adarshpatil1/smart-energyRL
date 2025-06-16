@@ -55,7 +55,7 @@ In smart homes, appliances often stay on unnecessarily, leading to energy wastag
 I have deployed the project on streamlit cloud and here is the url, 
 which showcases the total reward agent is generating in a day.
 
-[Smart Enegy RL app](smartenegyrl.streamlit.app)
+[Smart Enegy RL app](https://smartenergyrl.streamlit.app/)
 
 
 ## Results 
